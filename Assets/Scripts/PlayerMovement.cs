@@ -50,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
         BackLights();
 
         PowerUps();
+
+        Attack();
     }
 
     void Movement()
@@ -86,9 +88,15 @@ public class PlayerMovement : MonoBehaviour
 
     void PowerUps()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetMouseButton(1))
             Shield.SetActive(true);
         else
             Shield.SetActive(false);
+    }
+
+    void Attack()
+    {
+        //if(Input.GetKeyDown(KeyCode.Space))
+
     }
 }
