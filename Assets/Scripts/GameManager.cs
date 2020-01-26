@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject player;
 
-    private int lives = 3;
+    public int lives = 3;
 
     void Start()
     {
