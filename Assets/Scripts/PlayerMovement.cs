@@ -72,23 +72,31 @@ public class PlayerMovement : MonoBehaviour
 
     void BackLights()
     {
+        //FireCenter active
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.DownArrow))
             FireCenter.SetActive(true);
+        //FireCenter deactive
         else
             FireCenter.SetActive(false);
 
+        //FireLeft active
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             FireLeft.SetActive(true);
+        //FireLeft deactive
         else
             FireLeft.SetActive(false);
 
+        //FireRight active
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             FireRight.SetActive(true);
+        //FireRight deactive
         else
             FireRight.SetActive(false);
 
+        //FireBack active
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             FireBack.SetActive(true);
+        //FireBack deactive
         else
             FireBack.SetActive(false);
     }
