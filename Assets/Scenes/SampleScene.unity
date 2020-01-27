@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33494182}
   m_Layer: 0
-  m_Name: SpawnPoints
+  m_Name: SpawnPoint7
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -212,7 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177651504}
   m_Layer: 0
-  m_Name: SpawnPoints
+  m_Name: SpawnPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 403574167}
   m_Layer: 0
-  m_Name: SpawnPoints
+  m_Name: SpawnPoint3
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -362,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734152870}
   m_Layer: 0
-  m_Name: SpawnPoints
+  m_Name: SpawnPoint8
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -398,7 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 850014788}
   m_Layer: 0
-  m_Name: SpawnPoints
+  m_Name: SpawnPoint4
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -428,7 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936964288}
   m_Layer: 0
-  m_Name: SpawnPoints
+  m_Name: SpawnPoint5
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -458,7 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000007469}
   m_Layer: 0
-  m_Name: SpawnPoints
+  m_Name: SpawnPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -668,6 +668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1290554476}
   - component: {fileID: 1290554477}
+  - component: {fileID: 1290554478}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -703,6 +704,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 802575870}
   lives: 3
+--- !u!114 &1290554478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290554475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa14822113b8fe246a32e155e4587581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1000007468}
+  - {fileID: 177651503}
+  - {fileID: 403574166}
+  - {fileID: 850014787}
+  - {fileID: 936964287}
+  - {fileID: 2048400974}
+  - {fileID: 33494181}
+  - {fileID: 734152869}
+  Asteroids:
+  - {fileID: 1184232477276486109, guid: e5c8cb47039cb4d4f94b01434a0a104b, type: 3}
+  - {fileID: 5757717251700680690, guid: f949ee099bccccc4299718970cb3a386, type: 3}
+  - {fileID: 5890179818590008827, guid: c4f3999cb2e14514ebc8674fe6366f26, type: 3}
+  - {fileID: 7806675329507762244, guid: 8e4507ab6914b6443b7daa4728a7a600, type: 3}
+  - {fileID: 4024717953659768026, guid: 2c5bdf6eab6fea54daf3e6aa697ffbe1, type: 3}
+  - {fileID: 9079587371538264274, guid: 1fe0d0599abbf4d42a79bdaf45bcd604, type: 3}
+  - {fileID: 27864784679808964, guid: 787dde7fb5efe6b40bcb90a1f597a677, type: 3}
+  - {fileID: 2492375045776582354, guid: 2bd54072387a8bf4eb535391a4e70a03, type: 3}
+  - {fileID: 6425182613059733147, guid: 463ffd96722d25147acf7c36f742a354, type: 3}
+  - {fileID: 9168570763833456172, guid: f2b68047901343347b9585868b9d4daa, type: 3}
+  asteroidHolder: {fileID: 1066047897}
+  player: {fileID: 802575870}
+  MaxAsteroids: 3
 --- !u!1 &1424097531
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048400975}
   m_Layer: 0
-  m_Name: SpawnPoints
+  m_Name: SpawnPoint6
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

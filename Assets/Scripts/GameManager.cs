@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //gets the player
     public GameObject player;
 
+    //declares lives and appears in inspector
     public int lives = 3;
 
     void Start()
@@ -15,8 +17,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        //detects if the player goes out of bounds
         if (player.transform.position.x >= 11 || player.transform.position.x <= -11 || player.transform.position.y >= 5.2 || player.transform.position.y <= -5.2)
         {
+            //stops player, moves to middle and deactivates the player
             player.GetComponent<PlayerMovement>().ChangeMove(false);
             player.transform.position = Vector2.zero;
             player.SetActive(false);
@@ -28,8 +32,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //evertime player dies this function is called
     void Death()
     {
+        //sets rotation to zero, allows player to move, reactivates player and subtracts a life.
         player.transform.rotation = Quaternion.Euler(0, 0, 0);
         player.GetComponent<PlayerMovement>().ChangeMove(true);
         player.SetActive(true);
