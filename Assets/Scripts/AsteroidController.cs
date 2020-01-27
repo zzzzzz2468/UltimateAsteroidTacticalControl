@@ -4,26 +4,29 @@ using UnityEngine;
 
 public class AsteroidController : MonoBehaviour
 {
-    public List<GameObject> spawnPoints = new List<GameObject>();
-
-    public List<GameObject> Asteroids = new List<GameObject>();
-
-    public GameObject asteroidHolder;
     public GameObject player;
 
-    public int MaxAsteroids = 3;
+    private Vector2 playerPos;
+    private Vector2 asteroidPos;
+
+    public float speed = 5.0f;
 
     void Start()
     {
-        for(int i = asteroidHolder.transform.childCount; i < MaxAsteroids; i++)
-            CreateAsteroid();
+        playerPos = player.transform.position;
+
+        this.GetComponent<SpriteRenderer>().sortingOrder = 2;
     }
 
-    void CreateAsteroid()
+    void Update()
     {
-        GameObject spawnLocation = spawnPoints[Random.Range(0,spawnPoints.Count - 1)];
-        GameObject asteroid = Asteroids[Random.Range(0, Asteroids.Count - 1)];
+        AsteroidMove();
+    }
 
-        Instantiate(asteroid, spawnLocation.transform.position, Quaternion.LookRotation(player.transform.position), asteroidHolder.transform);
+    void AsteroidMove()
+    {
+        float step = speed * Time.deltaTime;
+
+        transform.position = Vector2.MoveTowards(transform.position, playerPos, step);
     }
 }

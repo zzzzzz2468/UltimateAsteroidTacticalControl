@@ -704,18 +704,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 802575870}
   lives: 3
---- !u!114 &1290554478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290554475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa14822113b8fe246a32e155e4587581, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   spawnPoints:
   - {fileID: 1000007468}
   - {fileID: 177651503}
@@ -737,8 +725,20 @@ MonoBehaviour:
   - {fileID: 6425182613059733147, guid: 463ffd96722d25147acf7c36f742a354, type: 3}
   - {fileID: 9168570763833456172, guid: f2b68047901343347b9585868b9d4daa, type: 3}
   asteroidHolder: {fileID: 1066047897}
-  player: {fileID: 802575870}
-  MaxAsteroids: 3
+--- !u!114 &1290554478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290554475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a28226b54cb1c4988acca418cc66c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidSpeed: 5
+  maxAsteroids: 3
 --- !u!1 &1424097531
 GameObject:
   m_ObjectHideFlags: 0
