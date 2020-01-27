@@ -15,13 +15,16 @@ public class PlayerMovement : MonoBehaviour
     private float forwardInput;
     private float rotateInput;
 
+    //getting the different thrusters
     public GameObject FireCenter;
     public GameObject FireLeft;
     public GameObject FireRight;
     public GameObject FireBack;
 
+    //getting the shield for powerup
     public GameObject Shield;
     
+    //allows the player to move or not
     private bool canMove = true;
 
     void Start()
@@ -30,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         player.GetComponent<Rigidbody2D>();
     }
 
+    //allows the coder to change canMove from other scripts
     public void ChangeMove(bool canMoveThing)
     {
         canMove = canMoveThing;
@@ -47,10 +51,13 @@ public class PlayerMovement : MonoBehaviour
         if(canMove)
             Movement();
 
+        //the different lights behind the ship
         BackLights();
 
+        //declaring power ups and what they do
         PowerUps();
 
+        //allowing the player to attack
         Attack();
     }
 
