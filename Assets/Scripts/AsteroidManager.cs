@@ -16,6 +16,8 @@ public class AsteroidManager : MonoBehaviour
 
     public static AsteroidManager asteroidManager;
 
+    private int totalAsteroids = 0;
+
     private void Awake()
     {
 
@@ -33,6 +35,28 @@ public class AsteroidManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnAsteroids());
+    }
+
+    void Update()
+    {
+        if(asteroidHolder.transform.childCount < totalAsteroids)
+            StartCoroutine(SpawnAsteroids());
+        switch(asteroidHolder.transform.childCount)
+        {
+            case 1:
+                totalAsteroids = 1;
+                break;
+            case 2:
+                totalAsteroids = 2;
+                break;
+            case 3:
+                totalAsteroids = 3;
+                break;
+            default:
+                print("I Broke");
+                break;
+        }
+        print(totalAsteroids);
     }
 
     IEnumerator SpawnAsteroids()
@@ -53,8 +77,10 @@ public class AsteroidManager : MonoBehaviour
 
     void CreateAsteroid()
     {
-        GameObject spawnLocation = spawnPoints[Random.Range(0, spawnPoints.Count - 1)];
-        GameObject asteroid = Asteroids[Random.Range(0, Asteroids.Count - 1)];
+        GameObject spawnLocation = spawnPoints[Random.Range(0, spawnPoints.Count)];
+        GameObject asteroid = Asteroids[Random.Range(0, Asteroids.Count)];
+
+        totalAsteroids++;
 
         //float angle = Mathf.Atan2((player.transform.position - spawnLocation.transform.position).y, (player.transform.position - spawnLocation.transform.position).x) * Mathf.Rad2Deg;
         Instantiate(asteroid, spawnLocation.transform.position, Quaternion.identity, asteroidHolder.transform);

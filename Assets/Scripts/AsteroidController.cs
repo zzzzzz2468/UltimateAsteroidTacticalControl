@@ -22,7 +22,7 @@ public class AsteroidController : MonoBehaviour
     {
         AsteroidMove();
 
-        if (this.transform.position.x >= 11 || this.transform.position.x <= -11 || this.transform.position.y >= 5.2 || this.transform.position.y <= -5.2)
+        if (this.transform.position.x >= 15 || this.transform.position.x <= -15 || this.transform.position.y >= 10 || this.transform.position.y <= -10)
             AsteroidDestroy();
     }
 
@@ -35,6 +35,6 @@ public class AsteroidController : MonoBehaviour
 
     void AsteroidDestroy()
     {
-
+        Destroy(gameObject);
     }
 }
