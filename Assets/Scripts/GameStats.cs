@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GameStats : MonoBehaviour
 {
+    public GameObject asteroidMan;
     public int asteroidSpeed = 5;
     public int maxAsteroids = 3;
+    public float spawnTime = 2.0f;
 
     void Start()
     {
-        this.GetComponent<GameManager>().totalAsteroids(maxAsteroids);
+        asteroidMan.GetComponent<AsteroidManager>().gameStatsVariable(maxAsteroids, spawnTime);
     }
 }

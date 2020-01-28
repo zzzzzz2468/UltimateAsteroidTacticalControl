@@ -27,8 +27,9 @@ public class PlayerMovement : MonoBehaviour
     //allows the player to move or not
     private bool canMove = true;
 
-    void Start()
+    void Awake()
     {
+        GameManager.gamemanager.player = gameObject;
         //gets ths ridgidbody
         player.GetComponent<Rigidbody2D>();
     }

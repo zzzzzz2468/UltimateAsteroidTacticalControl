@@ -4,38 +4,25 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager gamemanager;
+
     //gets the player
     public GameObject player;
 
     //declares lives and appears in inspector
     public int lives = 3;
 
-    public List<GameObject> spawnPoints = new List<GameObject>();
-
-    public List<GameObject> Asteroids = new List<GameObject>();
-
-    public GameObject asteroidHolder;
-
-    private int maxAsteroids = 3;
-
-    void Start()
+    private void Awake()
     {
-        StartCoroutine(SpawnAsteroids());
-    }
 
-    IEnumerator SpawnAsteroids()
-    {
-        for (int i = asteroidHolder.transform.childCount; i < maxAsteroids; i++)
+        if (gamemanager == null)
         {
-            yield return new WaitForSeconds(2f);
-            CreateAsteroid();
-            print(i);
+            gamemanager = this;
+            DontDestroyOnLoad(gameObject);
         }
-    }
-
-    public void totalAsteroids(int temp)
-    {
-        maxAsteroids = temp;
+        else {
+            Destroy(gameObject);
+        }
     }
 
     void Update()
@@ -64,13 +51,5 @@ public class GameManager : MonoBehaviour
         player.SetActive(true);
         lives -= 1;
         print(lives);
-    }
-
-    void CreateAsteroid()
-    {
-        GameObject spawnLocation = spawnPoints[Random.Range(0, spawnPoints.Count - 1)];
-        GameObject asteroid = Asteroids[Random.Range(0, Asteroids.Count - 1)];
-
-        Instantiate(asteroid, spawnLocation.transform.position, Quaternion.LookRotation(player.transform.position), asteroidHolder.transform);
     }
 }

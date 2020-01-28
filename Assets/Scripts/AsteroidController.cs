@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class AsteroidController : MonoBehaviour
 {
-    public GameObject player;
-
-    private Vector2 playerPos;
-    private Vector2 asteroidPos;
+    public Vector3 playerPos;
+    Vector3 newPos;
 
     public float speed = 5.0f;
 
     void Start()
     {
-        playerPos = player.transform.position;
+        playerPos = GameManager.gamemanager.player.transform.position;
+
+        newPos = playerPos - transform.position;
 
         this.GetComponent<SpriteRenderer>().sortingOrder = 2;
     }
@@ -21,12 +21,20 @@ public class AsteroidController : MonoBehaviour
     void Update()
     {
         AsteroidMove();
+
+        if (this.transform.position.x >= 11 || this.transform.position.x <= -11 || this.transform.position.y >= 5.2 || this.transform.position.y <= -5.2)
+            AsteroidDestroy();
     }
 
     void AsteroidMove()
     {
         float step = speed * Time.deltaTime;
 
-        transform.position = Vector2.MoveTowards(transform.position, playerPos, step);
+        transform.position = Vector2.MoveTowards(transform.position, transform.position + newPos.normalized, step);
+    }
+
+    void AsteroidDestroy()
+    {
+
     }
 }
