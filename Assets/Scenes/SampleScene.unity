@@ -238,6 +238,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6529659178909671933}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &802575875
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802575870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.56
 --- !u!1 &850014787
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +495,7 @@ MonoBehaviour:
   asteroidMan: {fileID: 1354959292}
   asteroidSpeed: 5
   maxAsteroids: 3
-  spawnTime: 1
+  spawnTime: 0.5
 --- !u!1 &1354959292
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +800,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659178394448899, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6529659178394448898, guid: ac01589dd12a3704ea920d1ab6290b16,
         type: 3}
