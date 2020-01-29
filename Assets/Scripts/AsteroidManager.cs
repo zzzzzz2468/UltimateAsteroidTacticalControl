@@ -15,8 +15,7 @@ public class AsteroidManager : MonoBehaviour
     private float timeInBetween = 2.0f;
 
     public static AsteroidManager asteroidManager;
-
-    private int totalAsteroids = 0;
+    private bool isRunning = false;
 
     private void Awake()
     {
@@ -32,31 +31,13 @@ public class AsteroidManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        StartCoroutine(SpawnAsteroids());
-    }
-
     void Update()
     {
-        if(asteroidHolder.transform.childCount < totalAsteroids)
-            StartCoroutine(SpawnAsteroids());
-        switch(asteroidHolder.transform.childCount)
+        if (!isRunning && asteroidHolder.transform.childCount < maxAsteroids)
         {
-            case 1:
-                totalAsteroids = 1;
-                break;
-            case 2:
-                totalAsteroids = 2;
-                break;
-            case 3:
-                totalAsteroids = 3;
-                break;
-            default:
-                print("I Broke");
-                break;
+            isRunning = true;
+            StartCoroutine(SpawnAsteroids());
         }
-        print(totalAsteroids);
     }
 
     IEnumerator SpawnAsteroids()
@@ -65,8 +46,8 @@ public class AsteroidManager : MonoBehaviour
         {
             yield return new WaitForSeconds(timeInBetween);
             CreateAsteroid();
-            print(i);
         }
+        isRunning = false;
     }
 
     public void gameStatsVariable(int totAst, float spnTime)
@@ -79,8 +60,6 @@ public class AsteroidManager : MonoBehaviour
     {
         GameObject spawnLocation = spawnPoints[Random.Range(0, spawnPoints.Count)];
         GameObject asteroid = Asteroids[Random.Range(0, Asteroids.Count)];
-
-        totalAsteroids++;
 
         //float angle = Mathf.Atan2((player.transform.position - spawnLocation.transform.position).y, (player.transform.position - spawnLocation.transform.position).x) * Mathf.Rad2Deg;
         Instantiate(asteroid, spawnLocation.transform.position, Quaternion.identity, asteroidHolder.transform);

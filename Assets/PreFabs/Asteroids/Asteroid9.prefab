@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6653044213695269116}
   - component: {fileID: 526730884718971230}
   - component: {fileID: 2295272987983871840}
+  - component: {fileID: 3483635025730020423}
   m_Layer: 0
-  m_Name: meteorGrey_big4
-  m_TagString: Untagged
+  m_Name: Asteroid9
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,5 +93,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa14822113b8fe246a32e155e4587581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6529659178394448899, guid: ac01589dd12a3704ea920d1ab6290b16, type: 3}
+  playerPos: {x: 0, y: 0, z: 0}
   speed: 5
+--- !u!58 &3483635025730020423
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6425182613059733147}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.49

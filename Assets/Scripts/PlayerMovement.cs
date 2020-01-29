@@ -115,4 +115,10 @@ public class PlayerMovement : MonoBehaviour
         //if(Input.GetKeyDown(KeyCode.Space))
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Enemy"))
+            GameManager.gamemanager.GotHit();
+    }
 }

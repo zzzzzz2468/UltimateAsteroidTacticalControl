@@ -30,26 +30,36 @@ public class GameManager : MonoBehaviour
         //detects if the player goes out of bounds
         if (player.transform.position.x >= 11 || player.transform.position.x <= -11 || player.transform.position.y >= 5.2 || player.transform.position.y <= -5.2)
         {
-            //stops player, moves to middle and deactivates the player
-            player.GetComponent<PlayerMovement>().ChangeMove(false);
-            player.transform.position = Vector2.zero;
-            player.SetActive(false);
-
-            if (lives >= 1)
-                Invoke("Death", 3);
-            else
-                Application.Quit();
+            PreDeath();
         }
     }
 
-    //evertime player dies this function is called
-    void Death()
+    public void GotHit()
     {
-        //sets rotation to zero, allows player to move, reactivates player and subtracts a life.
-        player.transform.rotation = Quaternion.Euler(0, 0, 0);
-        player.GetComponent<PlayerMovement>().ChangeMove(true);
-        player.SetActive(true);
-        lives -= 1;
-        print(lives);
+        PreDeath();
+    }
+
+    //evertime player dies this function is called
+    public void Death()
+    {
+            //sets rotation to zero, allows player to move, reactivates player and subtracts a life.
+            player.transform.rotation = Quaternion.Euler(0, 0, 0);
+            player.GetComponent<PlayerMovement>().ChangeMove(true);
+            player.SetActive(true);
+            lives -= 1;
+            print(lives);
+    }
+
+    void PreDeath()
+    {
+        //stops player, moves to middle and deactivates the player
+        player.GetComponent<PlayerMovement>().ChangeMove(false);
+        player.transform.position = Vector2.zero;
+        player.SetActive(false);
+
+        if (lives >= 0)
+            Invoke("Death", 3);
+        else
+            Application.Quit();
     }
 }
