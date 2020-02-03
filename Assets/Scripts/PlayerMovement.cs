@@ -27,6 +27,9 @@ public class PlayerMovement : MonoBehaviour
     //allows the player to move or not
     private bool canMove = true;
 
+    public GameObject bulletHolder;
+    public GameObject bullet;
+
     void Awake()
     {
         GameManager.gamemanager.player = gameObject;
@@ -112,7 +115,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Attack()
     {
-        //if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))
+            Instantiate(bullet, player.transform.position, Quaternion.identity, bulletHolder.transform);
 
     }
 

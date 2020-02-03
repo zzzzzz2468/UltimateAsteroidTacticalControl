@@ -20,7 +20,8 @@ public class GameManager : MonoBehaviour
             gamemanager = this;
             DontDestroyOnLoad(gameObject);
         }
-        else {
+        else
+        {
             Destroy(gameObject);
         }
     }
@@ -28,19 +29,19 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //detects if the player goes out of bounds
-        if (player.transform.position.x >= 11 || player.transform.position.x <= -11 || player.transform.position.y >= 5.2 || player.transform.position.y <= -5.2)
+        if (player.transform.position.x >= 9 || player.transform.position.x <= -9 || player.transform.position.y >= 5.2 || player.transform.position.y <= -5.2)
         {
-            PreDeath();
+            Death();
         }
     }
 
     public void GotHit()
     {
-        PreDeath();
+        Death();
     }
 
     //evertime player dies this function is called
-    public void Death()
+    public void Respawn()
     {
             //sets rotation to zero, allows player to move, reactivates player and subtracts a life.
             player.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour
             print(lives);
     }
 
-    void PreDeath()
+    void Death()
     {
         //stops player, moves to middle and deactivates the player
         player.GetComponent<PlayerMovement>().ChangeMove(false);
@@ -58,7 +59,7 @@ public class GameManager : MonoBehaviour
         player.SetActive(false);
 
         if (lives >= 0)
-            Invoke("Death", 3);
+            Invoke("Respawn", 3);
         else
             Application.Quit();
     }

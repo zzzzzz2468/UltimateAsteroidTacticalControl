@@ -29,7 +29,7 @@ public class AsteroidController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
-            GameManager.gamemanager.GetComponent<GameManager>().Death();
+            GameManager.gamemanager.GetComponent<GameManager>().Respawn();
     }
 
     void AsteroidMove()
