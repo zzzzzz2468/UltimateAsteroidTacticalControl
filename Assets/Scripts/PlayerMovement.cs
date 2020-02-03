@@ -11,6 +11,12 @@ public class PlayerMovement : MonoBehaviour
     public float rotateSpeed = 20.0f;
     public float speed = 20.0f;
 
+
+    public float bulletLife = 0.5f;
+    public float bulletSpeed = 10.0f;
+    private float fireElapsedTime = 0;
+    public float fireDelay = 0.2f;
+
     //creates inputs variables
     private float forwardInput;
     private float rotateInput;
@@ -62,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         PowerUps();
 
         //allowing the player to attack
+        fireElapsedTime += Time.deltaTime;
         Attack();
     }
 
@@ -115,8 +122,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Attack()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-            Instantiate(bullet, player.transform.position, Quaternion.identity, bulletHolder.transform);
+        if (Input.GetKeyDown(KeyCode.Space) && fireElapsedTime >= fireDelay)
+        {
+            var shot = Instantiate(bullet, player.transform.position, transform.rotation, bulletHolder.transform);
+            shot.GetComponent<Bullet>().bulletLifeSpan = bulletLife;
+            shot.GetComponent<Bullet>().bulletSpeed = bulletSpeed;
+            fireElapsedTime = 0;
+        }
 
     }
 

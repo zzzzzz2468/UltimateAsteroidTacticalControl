@@ -496,6 +496,7 @@ MonoBehaviour:
   asteroidSpeed: 5
   maxAsteroids: 3
   spawnTime: 0.5
+  bulletSpeed: 2
 --- !u!1 &1354959292
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +807,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6529659178394448899, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6529659178394448898, guid: ac01589dd12a3704ea920d1ab6290b16,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -860,6 +866,77 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659178394449916, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659178394449919, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2794539019609119298, guid: 319a18c0cd3f26942b46252927a25d42,
+        type: 3}
+    - target: {fileID: 6529659178394449919, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: bulletHolder
+      value: 
+      objectReference: {fileID: 1161676555}
+    - target: {fileID: 6529659178394449919, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: bulletLife
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659178394449919, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: fireDelay
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659177988265006, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659177184666059, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659177313727077, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659178347624721, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659177217541309, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659178319609064, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659178726513229, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659177274678363, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529659177689570445, guid: ac01589dd12a3704ea920d1ab6290b16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac01589dd12a3704ea920d1ab6290b16, type: 3}
