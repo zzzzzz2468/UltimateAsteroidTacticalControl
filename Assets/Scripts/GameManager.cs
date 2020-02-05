@@ -43,12 +43,12 @@ public class GameManager : MonoBehaviour
     //evertime player dies this function is called
     public void Respawn()
     {
-            //sets rotation to zero, allows player to move, reactivates player and subtracts a life.
-            player.transform.rotation = Quaternion.Euler(0, 0, 0);
-            player.GetComponent<PlayerMovement>().ChangeMove(true);
-            player.SetActive(true);
-            lives -= 1;
-            print(lives);
+        //sets rotation to zero, allows player to move, reactivates player and subtracts a life.
+        player.transform.rotation = Quaternion.Euler(0, 0, 0);
+        player.GetComponent<PlayerMovement>().ChangeMove(true);
+        player.SetActive(true);
+        lives -= 1;
+        print(lives);
     }
 
     void Death()

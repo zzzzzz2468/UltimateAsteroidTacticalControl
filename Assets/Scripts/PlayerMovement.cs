@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float rotateSpeed = 20.0f;
     public float speed = 20.0f;
 
-
+    //Bullet variables
     public float bulletLife = 0.5f;
     public float bulletSpeed = 10.0f;
     private float fireElapsedTime = 0;
@@ -38,7 +38,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        //sets the player to player
         GameManager.gamemanager.player = gameObject;
+
         //gets ths ridgidbody
         player.GetComponent<Rigidbody2D>();
     }
@@ -112,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
             FireBack.SetActive(false);
     }
 
+    //the player can use powerups
     void PowerUps()
     {
         if (Input.GetMouseButton(1))
@@ -120,10 +123,13 @@ public class PlayerMovement : MonoBehaviour
             Shield.SetActive(false);
     }
 
+    //players attacking
     void Attack()
     {
+        //checks if enough time inbetween shots
         if (Input.GetKeyDown(KeyCode.Space) && fireElapsedTime >= fireDelay)
         {
+            //creates bullet, sets variables in bullet script and resets delay
             var shot = Instantiate(bullet, player.transform.position, transform.rotation, bulletHolder.transform);
             shot.GetComponent<Bullet>().bulletLifeSpan = bulletLife;
             shot.GetComponent<Bullet>().bulletSpeed = bulletSpeed;
@@ -132,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    //detects if an asteroid hits the player
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Enemy"))

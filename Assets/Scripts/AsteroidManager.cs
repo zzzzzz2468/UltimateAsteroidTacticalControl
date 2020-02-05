@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class AsteroidManager : MonoBehaviour
 {
+    //Gets the objects to spawn and where to spawn
+    [Header("Lists")]
     public List<GameObject> spawnPoints = new List<GameObject>();
-
     public List<GameObject> Asteroids = new List<GameObject>();
 
+    //gets asteroidHolder, where asteroids spawn, and allows other scripts to access this script
+    [Header("GameObjects")]
     public GameObject asteroidHolder;
+    public static AsteroidManager asteroidManager;
 
+    //AsteroidWaves
+    [Header("Waves")]
+    private int wave = 0;
+    public int numOfWaves = 5;
+
+    //Number of MaxAsteroid and timeInBetweenSpawn, changable in GameStats
     private int maxAsteroids = 3;
-
     private float timeInBetween = 2.0f;
 
-    public static AsteroidManager asteroidManager;
+    //detects if the corotine is running
     private bool isRunning = false;
 
     private void Awake()
     {
-
+        //destroys the gameobject if one already exists
         if (asteroidManager == null)
         {
             asteroidManager = this;
@@ -33,6 +42,7 @@ public class AsteroidManager : MonoBehaviour
 
     void Update()
     {
+        //spawns asteroids if there are less than the maxAsteroids
         if (!isRunning && asteroidHolder.transform.childCount < maxAsteroids)
         {
             isRunning = true;
@@ -40,6 +50,7 @@ public class AsteroidManager : MonoBehaviour
         }
     }
 
+    //Detects how many asteroids need to be created and then calls the void
     IEnumerator SpawnAsteroids()
     {
         for (int i = asteroidHolder.transform.childCount; i < maxAsteroids; i++)
@@ -50,18 +61,24 @@ public class AsteroidManager : MonoBehaviour
         isRunning = false;
     }
 
+    //gets the stats from game stats
     public void gameStatsVariable(int totAst, float spnTime)
     {
         maxAsteroids = totAst;
         timeInBetween = spnTime;
     }
 
+    //actually creates the asteroid
     void CreateAsteroid()
     {
+        //random asteroid and random spawn
         GameObject spawnLocation = spawnPoints[Random.Range(0, spawnPoints.Count)];
         GameObject asteroid = Asteroids[Random.Range(0, Asteroids.Count)];
 
-        //float angle = Mathf.Atan2((player.transform.position - spawnLocation.transform.position).y, (player.transform.position - spawnLocation.transform.position).x) * Mathf.Rad2Deg;
-        Instantiate(asteroid, spawnLocation.transform.position, Quaternion.identity, asteroidHolder.transform);
+        //detects if player is alive or not, and stops spawning if they are dead
+        if (!GameManager.gamemanager.player.activeInHierarchy)
+            print("The Player is Dead");
+        else
+            Instantiate(asteroid, spawnLocation.transform.position, Quaternion.identity, asteroidHolder.transform);
     }
 }

@@ -4,34 +4,40 @@ using UnityEngine;
 
 public class AsteroidController : MonoBehaviour
 {
+    //sets the player position and where the asteroid is goiing
     public Vector3 playerPos;
     Vector3 newPos;
 
+    //speed of the asteroid
     public float speed = 5.0f;
 
     void Start()
     {
+        //sets playerpos through gamemanager
         playerPos = GameManager.gamemanager.player.transform.position;
 
+        //sets where the asteroid is going
         newPos = playerPos - transform.position;
 
+        //sets the asteroid to be above the background
         this.GetComponent<SpriteRenderer>().sortingOrder = 2;
     }
 
     void Update()
     {
+        //moves the asteroid
         AsteroidMove();
 
+        //destroys the asteroid if it goes to far
         if (this.transform.position.x >= 15 || this.transform.position.x <= -15 || this.transform.position.y >= 10 || this.transform.position.y <= -10)
+            AsteroidDestroy();
+
+        //destroys the asteroid if player dies
+        if (!GameManager.gamemanager.player.activeInHierarchy)
             AsteroidDestroy();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-            GameManager.gamemanager.GetComponent<GameManager>().Respawn();
-    }
-
+    //moves the asteroid
     void AsteroidMove()
     {
         float step = speed * Time.deltaTime;
@@ -39,6 +45,7 @@ public class AsteroidController : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, transform.position + newPos.normalized, step);
     }
 
+    //destroys the asteroid
     void AsteroidDestroy()
     {
         Destroy(gameObject);

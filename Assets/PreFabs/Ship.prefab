@@ -3,15 +3,14 @@
 --- !u!1 &6529659177184666059
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685363079010955, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529659177184666053}
   - component: {fileID: 6529659177184666058}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fireLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21,8 +20,7 @@ GameObject:
 --- !u!4 &6529659177184666053
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685363079010953, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177184666059}
@@ -36,8 +34,7 @@ Transform:
 --- !u!212 &6529659177184666058
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685363079010952, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177184666059}
@@ -85,15 +82,14 @@ SpriteRenderer:
 --- !u!1 &6529659177217541309
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362668947698, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529659177217541311}
   - component: {fileID: 6529659177217541308}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,8 +99,7 @@ GameObject:
 --- !u!4 &6529659177217541311
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362668947699, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177217541309}
@@ -118,8 +113,7 @@ Transform:
 --- !u!212 &6529659177217541308
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362668947696, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177217541309}
@@ -167,15 +161,14 @@ SpriteRenderer:
 --- !u!1 &6529659177274678363
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685363692269549, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529659177274678362}
   - component: {fileID: 6529659177274678357}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fireBackRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,8 +178,7 @@ GameObject:
 --- !u!4 &6529659177274678362
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685363692269546, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177274678363}
@@ -200,8 +192,7 @@ Transform:
 --- !u!212 &6529659177274678357
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685363692269547, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177274678363}
@@ -249,15 +240,14 @@ SpriteRenderer:
 --- !u!1 &6529659177313727077
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362613754079, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529659177313727079}
   - component: {fileID: 6529659177313727076}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fireRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,8 +257,7 @@ GameObject:
 --- !u!4 &6529659177313727079
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362613754077, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177313727077}
@@ -282,8 +271,7 @@ Transform:
 --- !u!212 &6529659177313727076
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362613754076, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177313727077}
@@ -331,15 +319,14 @@ SpriteRenderer:
 --- !u!1 &6529659177689570445
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685364515265493, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529659177689570444}
   - component: {fileID: 6529659177689570447}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fireBackLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,8 +336,7 @@ GameObject:
 --- !u!4 &6529659177689570444
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685364515265490, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177689570445}
@@ -364,8 +350,7 @@ Transform:
 --- !u!212 &6529659177689570447
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685364515265491, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177689570445}
@@ -413,15 +398,14 @@ SpriteRenderer:
 --- !u!1 &6529659177988265006
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362524174817, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529659177988265000}
   - component: {fileID: 6529659177988265001}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fireCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,8 +415,7 @@ GameObject:
 --- !u!4 &6529659177988265000
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362524174831, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177988265006}
@@ -446,8 +429,7 @@ Transform:
 --- !u!212 &6529659177988265001
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362524174830, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659177988265006}
@@ -495,14 +477,13 @@ SpriteRenderer:
 --- !u!1 &6529659178319609064
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685363646455348, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529659178319609067}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletSpawnLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,8 +493,7 @@ GameObject:
 --- !u!4 &6529659178319609067
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685363646455349, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659178319609064}
@@ -527,14 +507,13 @@ Transform:
 --- !u!1 &6529659178347624721
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685363186602298, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529659178347624720}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fireBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,8 +523,7 @@ GameObject:
 --- !u!4 &6529659178347624720
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685363186602299, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659178347624721}
@@ -561,8 +539,7 @@ Transform:
 --- !u!1 &6529659178394448899
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362668727894, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -571,9 +548,10 @@ GameObject:
   - component: {fileID: 6529659178394449917}
   - component: {fileID: 6529659178394449916}
   - component: {fileID: 6529659178394449919}
-  m_Layer: 0
+  - component: {fileID: 802575875}
+  m_Layer: 10
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -581,12 +559,11 @@ GameObject:
 --- !u!4 &6529659178394448898
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362668727892, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659178394448899}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
@@ -603,8 +580,7 @@ Transform:
 --- !u!212 &6529659178394449917
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685362668727895, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659178394448899}
@@ -685,22 +661,42 @@ MonoBehaviour:
   player: {fileID: 6529659178394449916}
   rotateSpeed: 80
   speed: 80
+  bulletLife: 2
+  bulletSpeed: 10
+  fireDelay: 0.4
   FireCenter: {fileID: 6529659177988265006}
   FireLeft: {fileID: 6529659177184666059}
   FireRight: {fileID: 6529659177313727077}
   FireBack: {fileID: 6529659178347624721}
   Shield: {fileID: 6529659177217541309}
+  bulletHolder: {fileID: 0}
+  bullet: {fileID: 2794539019609119298, guid: 319a18c0cd3f26942b46252927a25d42, type: 3}
+--- !u!58 &802575875
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529659178394448899}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.56
 --- !u!1 &6529659178726513229
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685364261906960, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529659178726513228}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletSpawnRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,8 +706,7 @@ GameObject:
 --- !u!4 &6529659178726513228
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3906685364261906961, guid: 6428942414ba8464388ded591d1a839d,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529659178726513229}
