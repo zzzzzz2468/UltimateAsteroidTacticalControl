@@ -114,6 +114,15 @@ public class PlayerMovement : MonoBehaviour
             FireBack.SetActive(false);
     }
 
+    void Deactivate()
+    {
+        FireBack.SetActive(false);
+        FireRight.SetActive(false);
+        FireLeft.SetActive(false);
+        FireCenter.SetActive(false);
+        Shield.SetActive(false);
+    }
+
     //the player can use powerups
     void PowerUps()
     {
@@ -141,7 +150,19 @@ public class PlayerMovement : MonoBehaviour
     //detects if an asteroid hits the player
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Enemy"))
+        if (collision.gameObject.layer == 9)
+        {
+            Deactivate();
             GameManager.gamemanager.GotHit();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("PlayerExit"))
+        {
+            Deactivate();
+            GameManager.gamemanager.GotHit();
+        }
+
     }
 }

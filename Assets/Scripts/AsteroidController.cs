@@ -28,13 +28,17 @@ public class AsteroidController : MonoBehaviour
         //moves the asteroid
         AsteroidMove();
 
-        //destroys the asteroid if it goes to far
-        if (this.transform.position.x >= 15 || this.transform.position.x <= -15 || this.transform.position.y >= 10 || this.transform.position.y <= -10)
-            AsteroidDestroy();
-
         //destroys the asteroid if player dies
         if (!GameManager.gamemanager.player.activeInHierarchy)
             AsteroidDestroy();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.transform.CompareTag("AsteroidExit"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     //moves the asteroid

@@ -26,15 +26,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        //detects if the player goes out of bounds
-        if (player.transform.position.x >= 9 || player.transform.position.x <= -9 || player.transform.position.y >= 5.2 || player.transform.position.y <= -5.2)
-        {
-            Death();
-        }
-    }
-
     public void GotHit()
     {
         Death();
@@ -58,7 +49,7 @@ public class GameManager : MonoBehaviour
         player.transform.position = Vector2.zero;
         player.SetActive(false);
 
-        if (lives >= 0)
+        if (lives > 1)
             Invoke("Respawn", 3);
         else
             Application.Quit();
