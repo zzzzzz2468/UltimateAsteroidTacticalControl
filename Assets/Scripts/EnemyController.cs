@@ -25,6 +25,8 @@ public class EnemyController : MonoBehaviour
         //sets where the enemy is going
         newPos = playerPos - transform.position;
 
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, playerPos);
+
         //moves the enemy
         EnemyMove();
 
@@ -47,7 +49,6 @@ public class EnemyController : MonoBehaviour
         float step = speed * Time.deltaTime;
 
         transform.position = Vector2.MoveTowards(transform.position, transform.position + newPos.normalized, step);
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, playerPos);
     }
 
     //destroys the enemy
