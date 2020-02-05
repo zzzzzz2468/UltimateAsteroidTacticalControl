@@ -305,7 +305,7 @@ MonoBehaviour:
   - {fileID: 275614499304661731, guid: f1222f2e68b563a47974d1181772918d, type: 3}
   enemyHolder: {fileID: 1092356283}
   maxEnemies: 1
-  timeInBetween: 10
+  timeInBetween: 3
 --- !u!4 &649938485
 Transform:
   m_ObjectHideFlags: 0
