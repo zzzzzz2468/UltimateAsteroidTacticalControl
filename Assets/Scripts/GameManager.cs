@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     //declares lives and appears in inspector
     public int lives = 3;
 
+    public List<GameObject> liveUI = new List<GameObject>();
+
     private void Awake()
     {
 
@@ -48,6 +50,7 @@ public class GameManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().ChangeMove(false);
         player.transform.position = Vector2.zero;
         player.SetActive(false);
+        liveUI[lives - 1].SetActive(false);
 
         if (lives > 1)
             Invoke("Respawn", 3);

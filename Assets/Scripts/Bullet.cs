@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed = 100.0f;
     public float bulletLifeSpan = 5.0f;
 
-
     void Update()
     {
         //gives the bullet speed

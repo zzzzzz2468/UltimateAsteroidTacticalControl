@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bulletHolder;
     public GameObject bullet;
 
+    private bool invinceable = false;
+
     void Awake()
     {
         //sets the player to player
@@ -127,16 +129,22 @@ public class PlayerMovement : MonoBehaviour
     void PowerUps()
     {
         if (Input.GetMouseButton(1))
+        {
+            invinceable = true;
             Shield.SetActive(true);
+        }
         else
+        {
+            invinceable = false;
             Shield.SetActive(false);
+        }
     }
 
     //players attacking
     void Attack()
     {
         //checks if enough time inbetween shots
-        if (Input.GetKeyDown(KeyCode.Space) && fireElapsedTime >= fireDelay)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButton(0)) && fireElapsedTime >= fireDelay)
         {
             //creates bullet, sets variables in bullet script and resets delay
             var shot = Instantiate(bullet, player.transform.position, transform.rotation, bulletHolder.transform);
@@ -150,10 +158,14 @@ public class PlayerMovement : MonoBehaviour
     //detects if an asteroid hits the player
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 9 && !invinceable)
         {
             Deactivate();
             GameManager.gamemanager.GotHit();
+        }
+        else if(collision.gameObject.layer == 9 && invinceable)
+        {
+            Destroy(collision.gameObject);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

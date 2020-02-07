@@ -14,14 +14,10 @@ public class AsteroidManager : MonoBehaviour
     public GameObject asteroidHolder;
     public static AsteroidManager asteroidManager;
 
-    //AsteroidWaves
-    [Header("Waves")]
-    private int wave = 0;
-    public int numOfWaves = 5;
-
     //Number of MaxAsteroid and timeInBetweenSpawn, changable in GameStats
     private int maxAsteroids = 3;
     private float timeInBetween = 2.0f;
+    public float AstSpeed = 10.0f;
 
     //detects if the corotine is running
     private bool isRunning = false;
@@ -79,6 +75,9 @@ public class AsteroidManager : MonoBehaviour
         if (!GameManager.gamemanager.player.activeInHierarchy)
             print("The Player is Dead");
         else
-            Instantiate(asteroid, spawnLocation.transform.position, Quaternion.identity, asteroidHolder.transform);
+        {
+            var enemy = Instantiate(asteroid, spawnLocation.transform.position, Quaternion.identity, asteroidHolder.transform);
+            enemy.GetComponent<AsteroidController>().speed = AstSpeed;
+        }
     }
 }
